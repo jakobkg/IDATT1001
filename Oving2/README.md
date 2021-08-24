@@ -1,4 +1,4 @@
-# Øving 1: Variabler, uttrykk og aritmetikk
+# Øving 2: Valg (if og ternary operator) 
 
 Øving i emnet *IDATT1001 - Programmering 1*
 
