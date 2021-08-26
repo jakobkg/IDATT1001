@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
-public class oppg3 {
+public class Oppg3 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
         System.out.println("Oppgave 2, men baklengs!\nSkriv inn et helt antall sekunder:");
 
-        int inputSeconds = input.nextInt();
-        input.close();
+        int inputSeconds;
+        
+        try (Scanner input = new Scanner(System.in)) {
+            inputSeconds = input.nextInt();
+        }
 
         int hours = inputSeconds / 3600;
         int seconds = inputSeconds % 3600;

@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
-public class oppg1{
+public class Oppg1{
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
         System.out.println("Skuddår-kalkulator! Skriv inn et årstall for å se om det er et skuddår:");
-        int year = input.nextInt();
-        input.close();
 
-        System.out.printf("%4d er%s et skuddår", year, isLeapYear(year) ? "" : " ikke");
+        int year;
+        try (Scanner input = new Scanner(System.in)) {
+            year = input.nextInt();
+        }
+
+        System.out.printf("%d er%s et skuddår", year, isLeapYear(year) ? "" : " ikke");
     }
 
     public static boolean isLeapYear(int year) {
