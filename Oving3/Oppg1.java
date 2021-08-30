@@ -5,6 +5,7 @@ class Oppg1 {
     int start, slutt;
 
     System.out.println("Gangetabeller!");
+
     try (Scanner input = new Scanner(System.in)) {
       System.out.println("Hvilken tabell skal vi starte med?");
       start = input.nextInt();
