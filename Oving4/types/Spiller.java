@@ -8,10 +8,10 @@ public class Spiller {
 
     public Spiller() {
         this.poengsum = 0;
-        this.terning = new Random(System.currentTimeMillis());
+        this.terning = new Random();
     }
 
-    public int getSumPoeng() {
+    public int getPoengsum() {
         return this.poengsum;
     }
 
