@@ -6,10 +6,9 @@ public class Oppg2 {
 
         System.out.println("Mellom 1.5 og 3.5:");
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 15; i++) {
             System.out.println(generator.nesteDesimaltall(1.5, 3.5));
         }
-
 
         int nedre = 50;
         int øvre = 75;

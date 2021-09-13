@@ -5,8 +5,8 @@ public class Oppg1 {
         Fraction f1 = new Fraction(1, 4);
         Fraction f2 = new Fraction(1, 2);
 
-        f2.subtract(f1);
+        f2.divide(f1);
 
-        System.out.printf("En kvart er %s\n", f2);
+        System.out.printf("Resultatet er %s\n", f2);
     }
 }
