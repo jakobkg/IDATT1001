@@ -117,7 +117,7 @@ public class Fraction {
         List<Integer> factors = new ArrayList<Integer>();
 
         while (number > 1) {
-            for (int i = 2; i <= Math.ceil(Math.sqrt(number)); i++) {
+            for (int i = 2; i <= number; i++) {
                 if (number % i == 0) {
                     factors.add(i);
                     number /= i;
