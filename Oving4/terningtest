@@ -1,0 +1,15 @@
+#!/usr/bin/env fish
+
+set p1 0;
+set p2 0;
+
+for i in (seq 1 1000):
+	if test (java Oppg2 | cut -c9) = 2
+		set p1 (math $p1 + 1)
+	else
+		set p2 (math $p2 + 1)
+	end
+end
+
+echo Spiller 1 vant $p1 ganger
+echo Spiller 2 vant $p2 ganger
