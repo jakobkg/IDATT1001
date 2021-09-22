@@ -4,6 +4,7 @@ public class Oppg3 {
     public static void main(String[] args) {
         double[][] verdierA = {{1, 0, -1}, {1, 2, 0}};
         double[][] verdierB = {{1, 0, -1}, {3, 2, 0}, {-1, 1, 2}};
+        
         Matrise A = new Matrise(verdierA);
         Matrise B = new Matrise(verdierB);
 

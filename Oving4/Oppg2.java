@@ -11,7 +11,7 @@ public class Oppg2 {
             spiller2.kastTerning();
 
             counter++;
-            System.out.printf("Kast %d:\nSpiller 1 har %d poeng\nSpiller 2 har %d poeng\n\n", counter, spiller1.getPoengsum(), spiller2.getPoengsum());
+//            System.out.printf("Kast %d:\nSpiller 1 har %d poeng\nSpiller 2 har %d poeng\n\n", counter, spiller1.getPoengsum(), spiller2.getPoengsum());
         }
 
         System.out.printf("Spiller %d vinner etter %d kast, med %d poeng", spiller1.erFerdig() ? 1 : 2, counter, spiller1.erFerdig() ? spiller1.getPoengsum() : spiller2.getPoengsum());
