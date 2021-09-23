@@ -16,11 +16,17 @@ public class Tekst {
     }
 
     public double gjennomsnittligOrdlengde() {
-        String ingenTegn = this.innhold.replaceAll("[ÆØÅæøåA-Za-z0-9 ]+", "");
-        int antall = ingenTegn.split(" ").length;
-        int sum = ingenTegn.replaceAll(" ", "").length();
+        Tekst ingenTegn = this.fjernTegnsetting();
+        double antall = ingenTegn.toString().split(" ").length;
+        double sum = ingenTegn.toString().replaceAll(" ", "").length();
 
-        return Double.valueOf(sum) / antall;
+        return sum / antall;
+    }
+
+    public double gjennomsnittligAntallOrdPerPeriode() {
+        int antallOrd = this.fjernTegnsetting().toString().split(" ").length;
+        int antallPerioder = this.innhold.split("[.!:?]").length;
+        return Double.valueOf(antallOrd) / antallPerioder;
     }
 
     public Tekst erstattOrd(String eksisterende, String erstatning) {
@@ -29,6 +35,18 @@ public class Tekst {
 
     public String toString() {
         return this.innhold;
+    }
+
+    public String toUpper() {
+        return this.innhold.toUpperCase();
+    }
+
+    public String toLower() {
+        return this.innhold.toLowerCase();
+    }
+
+    private Tekst fjernTegnsetting() {
+        return new Tekst(this.innhold.replaceAll("(?u)(?m)\\p{Punct}", ""));
     }
 
     private final String innhold;

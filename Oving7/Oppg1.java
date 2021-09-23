@@ -1,5 +1,3 @@
-import java.time.chrono.MinguoChronology;
-
 import klasser.NyString;
 
 public class Oppg1 {
