@@ -1,5 +1,8 @@
 package klasser;
 
+/**
+ * klassebeskrivelse
+ */
 public class Tekst {
     public Tekst(String str) {
         this.innhold = str;
@@ -23,6 +26,10 @@ public class Tekst {
         return sum / antall;
     }
 
+    /**
+     * metodebeskrivelse
+     * @return
+     */
     public double gjennomsnittligAntallOrdPerPeriode() {
         int antallOrd = this.fjernTegnsetting().toString().split(" ").length;
         int antallPerioder = this.innhold.split("[.!:?]").length;
