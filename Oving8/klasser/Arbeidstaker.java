@@ -22,9 +22,23 @@ public class Arbeidstaker {
         this.skatteprosent = skatteprosent;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder buffer = new StringBuilder("");
+        buffer.append(String.format("| %s (%d)\n", this.getNavn(), this.getAlder()));
+        buffer.append(String.format("| Ansatt i %d år, siden %d\n", this.getAntallÅrAnsatt(), this.getAnsettelsesår()));
+        buffer.append(String.format("| Månedslønn: %.2f kr\n", this.månedslønn));
+        buffer.append(String.format("| Skatteprosent: %.1f\n", this.skatteprosent));
+        buffer.append(String.format("| Årslønn:\n"));
+        buffer.append(String.format("|   Brutto: %.2f\n", this.getBruttolønn()));
+        buffer.append(String.format("|   Netto: %.2f\n", this.getBruttolønn() - this.getÅrligSkattetrekk()));
+        
+        return buffer.toString();
+    }
+
     // Fancier getters
     public double getÅrligSkattetrekk() {
-        return (double)((int)(1050 * this.månedslønn * this.skatteprosent) / 100.);
+        return (double)((int)(1050 * this.månedslønn * (this.skatteprosent / 100.)) / 100.);
     }
 
     public double getBruttolønn() {

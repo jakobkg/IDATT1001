@@ -8,7 +8,7 @@ import java.util.Calendar;
  */
 public class Person {
     private final String fornavn, etternavn;
-    private int fødselsår;
+    private final int fødselsår;
 
     /**
      * Enkel konstruktør
@@ -46,6 +46,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return String.format("%s, f.:%d", this.getNavn(), this.fødselsår);
+        return String.format("%s, f. %d", this.getNavn(), this.fødselsår);
     }
 }
