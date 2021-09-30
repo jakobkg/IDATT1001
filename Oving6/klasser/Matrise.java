@@ -32,8 +32,8 @@ public class Matrise {
 
         double[][] buf = new double[this.m][this.n];
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
+        for (int i = 0; i < this.m; i++) {
+            for (int j = 0; j < this.n; j++) {
                 buf[i][j] = this.verdier[i][j] + B.verdier[i][j];
             }
         }
