@@ -6,5 +6,6 @@ public class Oppg2 {
         System.out.println(tekst.antallOrd());
         System.out.println(tekst.gjennomsnittligOrdlengde());
         System.out.println(tekst.erstattOrd("Denne", "Aeiou"));
+        System.out.println(tekst.toUpper());
     }
 }
