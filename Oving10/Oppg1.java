@@ -20,7 +20,7 @@ public class Oppg1 {
                 System.out.println("Meny for arrangementregister");
                 System.out.println("1. Vis register\n2. Legg til arrangement\n3. Finn arrangement\n4. Avslutt");
                 System.out.print("Valg: ");
-                valg = Integer.parseInt(input.nextLine());
+                valg = input.nextInt();
                 System.out.println();
 
                 switch (valg) {
@@ -30,32 +30,32 @@ public class Oppg1 {
                     
                     case 2:
                         System.out.print("Navn på arrangement: ");
-                        navn = input.nextLine();
+                        navn = input.next();
 
                         System.out.print("Sted: ");
-                        sted = input.nextLine();
+                        sted = input.next();
 
                         System.out.print("Arrangør: ");
-                        arrangør = input.nextLine();
+                        arrangør = input.next();
 
                         System.out.print("Type arrangement: ");
-                        type = input.nextLine();
+                        type = input.next();
 
                         System.out.print("Tidspunkt: ");
-                        tidspunkt = Long.parseLong(input.nextLine());
+                        tidspunkt = input.nextLong();
 
                         register.registrerArrangement(navn, sted, arrangør, type, tidspunkt);
                         break;
                     
                     case 3:
                         System.out.print("1. Søk på sted\n2. Søk på dato\nValg: ");
-                        valg = Integer.parseInt(input.nextLine());
+                        valg = input.nextInt();
                         System.out.println();
 
                         switch (valg) {
                             case 1:
                                 System.out.print("Sted: ");
-                                sted = input.nextLine();
+                                sted = input.next();
                                 for (Arrangement arrangement : register.finnArrangementPåSted(sted)) {
                                     System.out.println(arrangement);
                                 }
@@ -63,7 +63,7 @@ public class Oppg1 {
 
                             case 2:
                                 System.out.print("Dato: ");
-                                dato = Integer.parseInt(input.nextLine());
+                                dato = input.nextInt();
                                 for (Arrangement arrangement : register.finnArrangementPåDato(dato)) {
                                     System.out.println(arrangement);
                                 }
