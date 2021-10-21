@@ -24,16 +24,16 @@ public class Arbeidstaker {
 
     @Override
     public String toString() {
-        StringBuilder buffer = new StringBuilder("");
-        buffer.append(String.format("| %s (%d)\n", this.getNavn(), this.getAlder()));
-        buffer.append(String.format("| Ansatt i %d år, siden %d\n", this.getAntallÅrAnsatt(), this.getAnsettelsesår()));
-        buffer.append(String.format("| Månedslønn: %.2f kr\n", this.månedslønn));
-        buffer.append(String.format("| Skatteprosent: %.1f\n", this.skatteprosent));
-        buffer.append(String.format("| Årslønn:\n"));
-        buffer.append(String.format("|   Brutto: %.2f\n", this.getBruttolønn()));
-        buffer.append(String.format("|   Netto: %.2f\n", this.getBruttolønn() - this.getÅrligSkattetrekk()));
+        String buffer = "";
+        buffer = buffer.concat(String.format("%s (%d)\n", this.getNavn(), this.getAlder()));
+        buffer = buffer.concat(String.format("Ansatt i %d år, siden %d\n", this.getAntallÅrAnsatt(), this.getAnsettelsesår()));
+        buffer = buffer.concat(String.format("Månedslønn: %.2f kr\n", this.månedslønn));
+        buffer = buffer.concat(String.format("Skatteprosent: %.1f\n", this.skatteprosent));
+        buffer = buffer.concat(String.format("Årslønn:\n"));
+        buffer = buffer.concat(String.format("  Brutto: %.2f\n", this.getBruttolønn()));
+        buffer = buffer.concat(String.format("  Netto: %.2f\n", this.getBruttolønn() - this.getÅrligSkattetrekk()));
         
-        return buffer.toString();
+        return buffer;
     }
 
     // Fancier getters

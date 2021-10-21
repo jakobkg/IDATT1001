@@ -27,7 +27,7 @@ public class Oppgaveoversikt {
     }
 
     public void registrerStudent(Student nyStudent) {
-        Student[] nyeStudenter = new Student[this.studenter.length + 1];
+        Student[] nyeStudenter = new Student[this.antallStudenter + 1];
         
         for (int index = 0; index < this.studenter.length; index++) {
             nyeStudenter[index] = this.studenter[index];
@@ -105,7 +105,7 @@ public class Oppgaveoversikt {
         int valg = 0;
         Student valgtStudent;
 
-        try (Scanner input = new Scanner(System.in)) {
+        try (Scanner input = new Scanner(System.in).useDelimiter("\\n");) {
             do {
                 System.out.print("Hva vil du gjøre?\n1. Vis oversikt\n2. Vis spesifikk student\n3. Legg til student\n4. Godkjenn oppgave\n5. Avslutt\nValg: ");
                 valg = input.nextInt();
