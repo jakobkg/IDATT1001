@@ -12,5 +12,6 @@ public class Oppg2 {
         
         System.out.println(register.finnMeny("Frokostmeny"));
         System.out.println(register.finnRetterAvType("Drikke"));
+        System.out.println(register.finnMenyerMedPrisMellom(0, 500));
     }
 }

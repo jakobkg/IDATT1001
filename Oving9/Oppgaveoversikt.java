@@ -105,7 +105,7 @@ public class Oppgaveoversikt {
         int valg = 0;
         Student valgtStudent;
 
-        try (Scanner input = new Scanner(System.in).useDelimiter("\\n");) {
+        try (Scanner input = new Scanner(System.in).useDelimiter("\n");) {
             do {
                 System.out.print("Hva vil du gjøre?\n1. Vis oversikt\n2. Vis spesifikk student\n3. Legg til student\n4. Godkjenn oppgave\n5. Avslutt\nValg: ");
                 valg = input.nextInt();

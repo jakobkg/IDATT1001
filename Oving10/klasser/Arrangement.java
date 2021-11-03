@@ -20,7 +20,7 @@ public class Arrangement {
 
     @Override
     public String toString() {
-        return String.format("#%d: %s\nSted: %s\nTidspunkt: %s\nArrangør: %s\nType: %s\n",
+        return String.format("#%d: %s\nSted: %s\nTidspunkt: %s\nArrangør: %s\nType: %s",
                              this.arrangementNummer, this.navn, this.sted, this.getPrintableTidspunkt(), this.arrangør, this.type);
     }
 

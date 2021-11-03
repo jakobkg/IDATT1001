@@ -1,10 +1,10 @@
 package klasser;
 
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
-import java.util.Comparator;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 public class ArrangementRegister {
     
@@ -17,7 +17,7 @@ public class ArrangementRegister {
     @Override
     public String toString() {
         StringBuilder stringbuffer = new StringBuilder("Arrangementer:\n");
-        for (Arrangement arrangement : arrangementer) {
+        for (Arrangement arrangement : this.arrangementer) {
             stringbuffer.append(arrangement);
             stringbuffer.append("\n");
         }
