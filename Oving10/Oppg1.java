@@ -37,18 +37,21 @@ public class Oppg1 {
                             case 1:
                                 for (Arrangement arrangement : register.sorterPåSted()) {
                                     System.out.println(arrangement);
+                                    System.out.println();
                                 }
                                 break;
 
                             case 2:
                                 for (Arrangement arrangement : register.sorterPåType()) {
                                     System.out.println(arrangement);
+                                    System.out.println();
                                 }
                                 break;
 
                             case 3:
                                 for (Arrangement arrangement : register.sorterPåTidspunkt()) {
                                     System.out.println(arrangement);
+                                    System.out.println();
                                 }
                                 break;
                         
@@ -87,6 +90,7 @@ public class Oppg1 {
                                 sted = input.next();
                                 for (Arrangement arrangement : register.finnArrangementPåSted(sted)) {
                                     System.out.println(arrangement);
+                                    System.out.println();
                                 }
                                 break;
 
@@ -96,6 +100,7 @@ public class Oppg1 {
                                 dato = input.nextInt();
                                 for (Arrangement arrangement : register.finnArrangementPåDato(dato)) {
                                     System.out.println(arrangement);
+                                    System.out.println();
                                 }
                                 break;
 
@@ -107,6 +112,7 @@ public class Oppg1 {
                                 tilDato = input.nextInt();
                                 for (Arrangement arrangement : register.finnArrangementMellomDatoer(fraDato, tilDato)) {
                                     System.out.println(arrangement);
+                                    System.out.println();
                                 }
                         }
                         break;

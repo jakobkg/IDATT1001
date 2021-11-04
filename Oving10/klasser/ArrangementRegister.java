@@ -19,7 +19,7 @@ public class ArrangementRegister {
         StringBuilder stringbuffer = new StringBuilder("Arrangementer:\n");
         for (Arrangement arrangement : this.arrangementer) {
             stringbuffer.append(arrangement);
-            stringbuffer.append("\n");
+            stringbuffer.append("\n\n");
         }
 
         return stringbuffer.toString();
