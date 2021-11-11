@@ -59,9 +59,9 @@ public class Property {
     public String toString() {
         StringBuilder buffer = new StringBuilder();
         buffer.append(String.format("%s: %s\n", this.getId(), this.name));
-        buffer.append(String.format("Owner: %s", this.owner));
+        buffer.append(String.format("Owner: %s\n", this.owner));
         buffer.append(String.format("Municipality: %s\n", this.municipality));
-        buffer.append(String.format("Area: %.2f m^2\n", this.area));
+        buffer.append(String.format("Area: %.2f m^2", this.area));
 
         return buffer.toString();
     }

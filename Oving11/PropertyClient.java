@@ -75,7 +75,7 @@ public class PropertyClient {
                         if (registry.addProperty(new Property(municipality, municipalityNo, lotNo, sectionNo, area, name, owner))) {
                             System.out.println("Property added successfully!");
                         } else {
-                            System.out.println("Property was not added to the registry. This could be because it already exists, or due to a more severe underlying error");
+                            System.out.println("Property was not added to the registry, likely because a property of the same ID already exists");
                         }
                         break;
                     

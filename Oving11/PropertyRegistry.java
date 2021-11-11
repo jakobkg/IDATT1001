@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+/**
+ * PropertyRegistry
+ * A class for performing various actions on an ArrayList of the Property container class
+ */
 public class PropertyRegistry {
     private ArrayList<Property> properties;
 
